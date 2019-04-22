@@ -32,7 +32,7 @@ if (! $encounter) { // comes from globals.php
     die("Internal error: we do not seem to be in an encounter!");
 }
 
-$formid = $_GET['id'];
+$formid = check_file_dir_name($_GET['id']);
 $imagedir = $GLOBALS['OE_SITE_DIR'] . "/documents/$pid/encounters";
 
 // If Save was clicked, save the info.
